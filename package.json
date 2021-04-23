@@ -1,0 +1,20 @@
+{
+  "name": "Mini_Selenium_Project",
+  "version": "1.0.0",
+  "description": "This mini project is for analyze and get better comprehension about what selenium does for testing systems. Maybe it seem at first as if is too much but this can show the basics of the Job.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3Z3QU13L5/Mini_Selenium_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3Z3QU13L5/Mini_Selenium_Project/issues"
+  },
+  "homepage": "https://github.com/3Z3QU13L5/Mini_Selenium_Project#readme"
+}

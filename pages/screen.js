@@ -1,44 +1,46 @@
 const {Builder, By, Key, until, WebDriverWait} = require("selenium-webdriver");
 var {assert} = require("chai")
 
-module.exports = {
-    
-    click_on: async function (driver, selector) {
+module.exports = class basepage {
+    constructor (browser) {
+        global.driver = new Builder().forBrowser(browser).build();
+    }
+
+    async click_on (selector) {
         let element = await driver.findElement(By.css(selector));
         await element.click();
-    },
+    }
 
-    go_to: async function  (driver, url, selector) {
+    async go_to (url, selector) {
 
         // access login page
         await driver.get(url);
-        await this.wait_by_css(driver, selector);
+        await this.wait_by_css(selector);
         
         let title = await driver.getTitle();
         return title
-    },
+    }
 
-    type_into: async function (driver, selector, input) {
+    async type_into (selector, input) {
         let element = await driver.findElement(By.css(selector));
         await element.sendKeys(input);
-    },
+    }
 
-    wait_by_id: async function (driver, selector) {
+    async wait_by_id (selector) {
         await driver.wait(until.elementLocated(By.id(selector)));
-    },
+    }
 
-    wait_by_css: async function (driver, selector) {
+    async wait_by_css (selector) {
         await driver.wait(until.elementLocated(By.css(selector)));
-    },
+    }
 
-    wait_load: async function (driver, selector) {
+    async wait_load (selector) {
         // get url
         let url = await driver.getCurrentUrl();
 
         // wait for home page to load on twitter
         url.includes('twitter') ?
-            await this.wait_by_css(driver, selector):
-            await this.wait_by_css(driver, selector);
+            await this.wait_by_css(selector):
+            await this.wait_by_css(selector);
     }
-    
 }

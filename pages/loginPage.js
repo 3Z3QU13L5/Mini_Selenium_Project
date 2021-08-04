@@ -2,8 +2,8 @@ const {Builder, By, Key, until, WebDriverWait} = require("selenium-webdriver");
 const basepage = require("./screen");
 
 module.exports = class login extends basepage {
-    constructor (browser) {
-        super(browser);
+    constructor () {
+        super();
     }
 
     async valid_login (data, page) {

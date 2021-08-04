@@ -1,6 +1,6 @@
 module.exports = {
     
-    page_title: 'Twitter' || 'Iniciar sesión en Twitter / Twitter',
+    page_title: ['Twitter' || 'Iniciar sesión en Twitter / Twitter'],
     uid_input: 'input[name="session[username_or_email]"]', //Attributes
     password_input: 'input[name="session[password]"]', //Attributes
     login_button: 'div[data-testid="LoginForm_Login_Button"]', //Attributes

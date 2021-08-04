@@ -1,5 +1,5 @@
 module.exports = {
     
-    page_title: 'Twitter' || 'home / twitter',
+    page_title: ['Twitter' || 'home / twitter'],
 
 }

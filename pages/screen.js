@@ -2,8 +2,8 @@ const {Builder, By, Key, until, WebDriverWait} = require("selenium-webdriver");
 var {assert} = require("chai")
 
 module.exports = class basepage {
-    constructor (browser) {
-        global.driver = new Builder().forBrowser(browser).build();
+    constructor () {
+        global.driver; 
     }
 
     async click_on (selector) {
@@ -42,5 +42,9 @@ module.exports = class basepage {
         url.includes('twitter') ?
             await this.wait_by_css(selector):
             await this.wait_by_css(selector);
+    }
+
+    async set_driver (browser) {
+        global.driver = new Builder().forBrowser(browser).build();
     }
 }

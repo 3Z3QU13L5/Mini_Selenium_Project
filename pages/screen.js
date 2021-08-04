@@ -47,4 +47,18 @@ module.exports = class basepage {
     async set_driver (browser) {
         global.driver = new Builder().forBrowser(browser).build();
     }
+
+    async check_element (selector, text = '') {
+        
+        let element = await driver.findElement(By.css(selector));
+        let inText = await element.getText();
+        let isPresent = await element.isDisplayed();
+        let isCorrect = true;
+
+        if (text) {
+            isCorrect = text.includes(inText);
+        }
+
+        return {isPresent, isCorrect}
+    }
 }

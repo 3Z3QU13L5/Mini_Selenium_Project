@@ -4,7 +4,7 @@
   "description": "This mini project is for analyze and get better comprehension about what selenium does for testing systems. Maybe it seem at first as if is too much but this can show the basics of the Job.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/loginTest.js"
+    "test": "mocha --timeout 60000 ./test_Script.js"
   },
   "repository": {
     "type": "git",

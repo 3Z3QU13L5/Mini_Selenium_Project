@@ -48,6 +48,10 @@ module.exports = class basepage {
         global.driver = new Builder().forBrowser(browser).build();
     }
 
+    async set_newDriver (newDriver) {
+        global.driver = newDriver;
+    }
+
     async check_element (selector, text = '') {
         
         let element = await driver.findElement(By.css(selector));
@@ -60,5 +64,14 @@ module.exports = class basepage {
         }
 
         return {isPresent, isCorrect}
+    }
+
+    async get_driver () {
+        return driver;
+    }
+
+    async get_element (selector) {
+        let element = await driver.findElement(By.css(selector));
+        return element;
     }
 }

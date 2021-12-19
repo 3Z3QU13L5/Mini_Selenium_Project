@@ -10,9 +10,7 @@ module.exports = class homepage extends basepage {
         //click new post button
         await this.click_on(page.input_placeholder);
         //construct selector
-        let selector = page.text_input;
-        let name = data.Name.split(" ", 1);
-        selector = selector.replace("TK", name);
+        let selector = await this.create_selector(page.text_input, data.Name.split(" ", 1));
         //wait for module
         await this.wait_by_css(selector);
         //click text area

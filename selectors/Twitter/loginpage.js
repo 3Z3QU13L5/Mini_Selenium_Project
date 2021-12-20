@@ -3,6 +3,7 @@ module.exports = {
     page_title: ['Twitter', 'Iniciar sesión en Twitter / Twitter'],
     uid_input: 'input[autocomplete="username"]', //Attributes
     password_input: 'input[name="password"]', //Attributes
+    next_button: "div[role='button'][style*='background-color']",
     login_button: 'div[data-testid="LoginForm_Login_Button"]', //Attributes
     waiting_element: 'input[name="session[username_or_email]"]', 
     header: '',

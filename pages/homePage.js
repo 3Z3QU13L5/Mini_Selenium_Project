@@ -7,6 +7,8 @@ module.exports = class homepage extends basepage {
     }
 
     async make_post (data, page) {
+        //wait for new post button
+        await this.wait_by_css(page.input_placeholder)
         //click new post button
         await this.click_on(page.input_placeholder);
         //construct selector

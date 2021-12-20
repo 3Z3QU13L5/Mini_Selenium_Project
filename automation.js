@@ -29,7 +29,10 @@ async function main (page) {
     const home = await new homePage();
     let driver = await login.get_driver();
     await home.set_newDriver(driver);
-    await home.make_post(testData.facebook, page.homepage);
+    page.url.includes('facebook') ? 
+        await home.make_post(testData.facebook, page.homepage):
+        await home.make_post(testData.twitter, page.homepage);
 };
 
 main(facebook_page);
+main(twitter_page);

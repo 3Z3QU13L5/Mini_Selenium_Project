@@ -32,7 +32,9 @@ async function main (page) {
     page.url.includes('facebook') ? 
         await home.make_post(testData.facebook, page.homepage):
         await home.make_post(testData.twitter, page.homepage);
+    //let {isPresent, isCorrect} = await home.post_isPresent(testData.facebook, page.homepage);
+    //console.log(isPresent);
 };
 
-main(facebook_page);
+//main(facebook_page);
 main(twitter_page);

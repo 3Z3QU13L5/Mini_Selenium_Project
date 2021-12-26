@@ -5,6 +5,6 @@ module.exports = {
     input_placeholder: "div[role='button'][tabindex='0'].kbf60n1y",
     text_input: 'div[aria-label="What\'s on your mind, TK?"]',
     post_button: "div[role='button'][aria-label='Post']",
-    post: "div.c1et5uql",
+    post: "div[data-ad-comet-preview='message']",
     
 }

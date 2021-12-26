@@ -22,5 +22,16 @@ module.exports = class homepage extends basepage {
         //publish post
         await this.click_on(page.post_button);
     }
+
+    async post_isPresent (data, page){
+        
+        let message = data.message;
+
+        await this.wait_by_css(page.post);
+
+        let {isPresent, isCorrect} = await this.check_element(page.post, message);
+
+        return {isPresent, isCorrect};
+    }
     
 }

@@ -55,7 +55,7 @@ module.exports = class basepage {
     }
 
     async check_element (selector, text = '') {
-        
+
         let element = await driver.findElement(By.css(selector));
         let inText = await element.getText();
         let isPresent = await element.isDisplayed();
@@ -65,7 +65,7 @@ module.exports = class basepage {
             isCorrect = text.includes(inText);
         }
 
-        return {isPresent, isCorrect}
+        return {isPresent, isCorrect};
     }
 
     async get_driver () {

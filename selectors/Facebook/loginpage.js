@@ -1,6 +1,6 @@
 module.exports = {
     
-    page_title: 'Facebook - Inicia sesión o regístrate',
+    page_title: 'Facebook - Entrar o registrarse',
     uid_input: "input[id='email']",
     password_input: "input[id='pass']",
     login_button: "button[name='login']",

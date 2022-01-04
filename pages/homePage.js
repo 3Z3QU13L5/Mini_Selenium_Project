@@ -34,4 +34,14 @@ module.exports = class homepage extends basepage {
         return {isPresent, isCorrect};
     }
     
+    async comment_post(data, page){
+
+        let comment = data.comment;
+
+        await this.wait_by_css(page.homepage.comment_input);
+
+        await this.click_on(page.homepage.comment_input);
+
+        await this.type_bySteps(page.homepage.comment_input, comment);
+    }
 }

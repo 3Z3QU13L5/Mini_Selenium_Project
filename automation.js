@@ -20,6 +20,7 @@ const testData = require("./testData");
 // Secong working test Unsuccessful Log in
 
 async function main (page) {
+    console.log('went into main');
     const login = await new loginPage();
     await login.set_driver('firefox');
     let title = await login.go_to(page.url, page.login.uid_input);
@@ -29,12 +30,14 @@ async function main (page) {
     const home = await new homePage();
     let driver = await login.get_driver();
     await home.set_newDriver(driver);
-    page.url.includes('facebook') ? 
-        await home.make_post(testData.facebook, page.homepage):
-        await home.make_post(testData.twitter, page.homepage);
+    // page.url.includes('facebook') ? 
+    //     await home.make_post(testData.facebook, page.homepage):
+    //     await home.make_post(testData.twitter, page.homepage);
     //let {isPresent, isCorrect} = await home.post_isPresent(testData.facebook, page.homepage);
     //console.log(isPresent);
+    
 };
 
-//main(facebook_page);
-main(twitter_page);
+console.log('it started');
+main(facebook_page);
+//main(twitter_page);

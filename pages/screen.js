@@ -28,6 +28,13 @@ module.exports = class basepage {
         await element.sendKeys(input);
     }
 
+    async type_bySteps(selector, text) {
+        let char;
+        for(char of text){
+            await this.type_into(selector, char);
+        }
+    }
+
     async wait_by_id (selector) {
         await driver.wait(until.elementLocated(By.id(selector)));
     }
